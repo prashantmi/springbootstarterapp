@@ -1,5 +1,5 @@
 #---------------------------------------------------------------------
-spring.profiles.active: test
+spring.profiles.active: dev
 
 ---
 spring:
@@ -27,3 +27,17 @@ spring:
     additional-location:
 ---
 #---------------------------------------------------------------------
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /api-docs-json
+  swagger-ui:
+    enabled: true
+    path: /api-docs-ui
+    operationsSorter: method
+
+Info.contact: 
+  name: "Prashant Mishra"
+  email: email@email.com
+  url: https://voyager.com/

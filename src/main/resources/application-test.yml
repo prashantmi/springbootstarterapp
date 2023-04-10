@@ -12,6 +12,7 @@ spring:
     spring.h2.console.settings.web-allow-others: false
   datasource:
     url: jdbc:h2:file:/data/demo
+    #url: jdbc:h2:file:/Project/EclipsecSTS/PilotAutomationServer/h2data
     username: postgres
     password: admin
     driverClassName: org.h2.Driver
@@ -31,7 +32,7 @@ spring:
         default_schema: pilotautomation
   liquibase:
     enabled: true
-    change-log: classpath:liquibase/changelog/liquibase-changeLog.xml
+    change-log: classpath:liquibase/changelog/liquibase-changeLog2.xml
   devtools:
     add-properties: true
     livereload: 
@@ -45,13 +46,4 @@ server:
   host: locahost
   port: 8443
   
-#---------------------------------------------------------------------
-springdoc:
-  api-docs:
-    path: /api-docs-json
-  swagger-ui:
-    enabled: true
-    path: /api-docs-ui
-    operationsSorter: method
-
 #---------------------------------------------------------------------
