@@ -1,0 +1,29 @@
+#---------------------------------------------------------------------
+spring.profiles.active: test
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+    location: classpath:application-dev.yml
+    name: application-dev.yml
+    additional-location:
+---
+spring:
+  config:
+    activate:
+      on-profile: test
+    location: classpath:application-test.yml
+    name: application-test.yml
+    additional-location:
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+    location: classpath:application-prod.yml
+    name: application-prod.yml
+    additional-location:
+---
+#---------------------------------------------------------------------
