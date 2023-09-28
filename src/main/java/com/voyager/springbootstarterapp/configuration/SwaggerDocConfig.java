@@ -23,7 +23,7 @@ public class SwaggerDocConfig {
 
     @Bean
     public GroupedOpenApi adminApi() {
-	return GroupedOpenApi.builder().group("pilot-automation-server-admin")
+	return GroupedOpenApi.builder().group("SpringBootStarterApp")
 		.pathsToMatch("/pas/**")
 //		.addMethodFilter(method -> method.isAnnotationPresent(PilotAutomationServerApp.class))
 		.build();

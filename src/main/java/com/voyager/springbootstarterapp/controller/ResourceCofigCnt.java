@@ -1,5 +1,6 @@
 package com.voyager.springbootstarterapp.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -8,13 +9,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.voyager.springbootstarterapp.exception.PasCoreException;
+import com.voyager.springbootstarterapp.service.AppConfigFetcheService;
 
 import jakarta.servlet.http.HttpServletRequest;
 
 @RestController
 @RequestMapping(value = { "/pas/config/resource" })
-public class ResourceCofigCnt {
-
+public class ResourceCofigCnt { 
+	
     @RequestMapping(method = RequestMethod.GET)
     public ResponseEntity<?> getAllResources(HttpServletRequest request, HttpServletRequest reponse,
             @RequestBody String requestBody) throws PasCoreException {
